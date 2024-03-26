@@ -1,0 +1,21 @@
+[package]
+name = "piday"
+version = "1.0.0"
+edition = "2021"
+authors = ["asss-whom <cxfan2013@qq.com>"]
+discription = "This program utilizes the Win32 API to automate the drawing of circles for the 'https://matrix67.itch.io/pi-day-challenge'."
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies.windows]
+version = "0.54"
+features = [
+    "Win32_Foundation",
+    "Win32_UI_Input",
+    "Win32_UI_Input_KeyboardAndMouse",
+    "Win32_UI_WindowsAndMessaging"
+]
+
+[profile.release]
+strip = true
+lto = true
